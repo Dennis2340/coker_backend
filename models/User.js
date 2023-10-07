@@ -1,11 +1,20 @@
 import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
-const userSchema = new Schema({
+const userSchema = new Schema(
+  {
   username: String,
   email: String,
-  role: String,
-});
+  role: {
+    type: String,
+    enum: ['user', 'admin'],
+    default: 'user',
+  },
+},
+  {
+    timestamps: true,
+  }
+);
 
 const User = mongoose.model('User', userSchema);
 

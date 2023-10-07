@@ -6,7 +6,11 @@ const commentSchema = new Schema({
   username: String,
   content: String,
  
-});
+},
+{
+  timestamps: true
+}
+);
 
 const Comment = mongoose.model('Comment', commentSchema);
 

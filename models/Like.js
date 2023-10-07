@@ -3,9 +3,12 @@ const Schema = mongoose.Schema;
 
 const likeSchema = new Schema({
   userId: { type: Schema.Types.ObjectId, ref: 'User' },
-  username: String,
-  
-});
+  username: String, 
+},
+{
+  timestamps:true
+}
+);
 
 const Like = mongoose.model('Like', likeSchema);
 

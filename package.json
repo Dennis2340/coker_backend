@@ -1,0 +1,11 @@
+{
+  "name": "backend_application",
+  "version": "1.0.0",
+  "description": "This is the backend service of the application, and it is for a client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dennis Stephen Kamara",
+  "license": "MIT"
+}

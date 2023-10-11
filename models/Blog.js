@@ -10,7 +10,7 @@ const blogPostSchema = new Schema(
       username: String,
     },
     comments: [{ type: Schema.Types.ObjectId, ref: 'Comment' }],
-    likes: [{ type: Schema.Types.ObjectId, ref: 'Like' }],
+    likes: { type:Number, default: 0},
     tags: [String],
     pictureUrl: String,
   },

@@ -3,11 +3,10 @@ import User from "../models/User.js";
 
 export async function AddUser(req, res){
   try {
-    const { username, email } = req?.body;
+    const{ username, email } = req?.body
     const user = await User.create({
         username,
         email,
-    
     })
     res.status(201).json({message: "User added successfully", user})
   } catch (error) {
